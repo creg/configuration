@@ -48,7 +48,7 @@ Invoke-Expression (Join-Path $PSScriptRoot '.\vs-extensions.ps1')
 #-- Ensure configuration repository
 If (!(Test-Path c:\src\configuration))
 {
-	git clone git@github.com:dachew/configuration.git c:\src\configuration
+	git clone git@github.com:creg/configuration.git c:\src\configuration
 }
 
 
