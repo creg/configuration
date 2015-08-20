@@ -5,7 +5,7 @@ export VAGRANT_DEFAULT_PROVIDER=vmware_fusion
 tabname () { printf "\e]1;$1\a"; }
 export PATH=~/bin:$PATH
 
-export BOXEN_GITHUB_LOGIN=dachew
+export BOXEN_GITHUB_LOGIN=creg
 export VAGRANT_SERVER_URL=http://vagrantboxes.hq.daptiv.com
 
 # Setup git-prompt
@@ -24,3 +24,4 @@ PS1='$(printf "%$((`tput cols`-1))s\r")$(stat -f "\e[1;32m%Sp \e[0;33m%Su:%Sg\e[
 # Install rbenv
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
+	
