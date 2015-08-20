@@ -1,0 +1,15 @@
+{
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"AVR",
+		"AVR-ASM-Sublime",
+		"Dayle Rees Color Schemes",
+		"Git",
+		"MarkdownEditing",
+		"Package Control",
+		"Theme - Soda"
+	]
+}

@@ -1,0 +1,34 @@
+[user]
+	name = Creg Bradley
+	email = creg.bradley@changepoint.com
+
+[push]
+	default = simple
+
+[core]
+	autocrlf = true
+	editor = vim
+
+[difftool]
+	prompt = false
+
+[merge]
+	tool = kdiff3
+
+[diff]
+	tool = kdiff3
+
+[mergetool "kdiff3"]
+	path = C:/Program Files/KDiff3/kdiff3.exe
+
+[difftool "kdiff3"]
+	path = C:/Program Files/KDiff3/kdiff3.exe
+
+[alias]
+	nb = !sh -c 'git checkout -b $1 && git push -u origin HEAD' -
+	db = !sh -c 'git checkout master && git push origin :$1 && git branch -D $1 && git fetch -p' -
+	undo = reset --hard
+	logv = log --oneline --decorate --graph
+	size = !git bundle create repo.size --all && du -sh repo.size && rm -f repo.size
+	fb = !sh -c 'git filter-branch --subdirectory-filter $1 --tag-name-filter cat --prune-empty -- --all' -
+

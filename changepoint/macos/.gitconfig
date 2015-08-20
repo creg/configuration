@@ -1,0 +1,36 @@
+[push]
+	default = current
+
+[core]
+	editor = vim
+	autocrlf = true
+	excludesfile = /opt/boxen/config/git/gitignore
+	eol = lf
+
+[user]
+	name = Creg Bradley
+	email = creg.bradley@changepoint.com
+
+[alias]
+	logg = log --graph
+	who = shortlog -s
+	logsl = log --oneline --decorate
+	logfg = log --pretty=oneline --abbrev-commit --graph --decorate --all
+    nb = !sh -c 'git checkout -b $1 && git push -u origin HEAD' -
+    db = !sh -c 'git checkout master && git push origin :$1 && git branch -D $1 && git fetch -p' -
+    undo = reset --hard
+    logv = log --oneline --decorate --graph
+    size = !git bundle create repo.size --all && du -sh repo.size && rm -f repo.size
+	fb = !sh -c 'git filter-branch --subdirectory-filter $1 --tag-name-filter cat --prune-empty -- --all' -
+
+[color]
+	ui = true
+
+[hub]
+	protocol = https
+
+[credential]
+	helper = /opt/boxen/bin/boxen-git-credential
+
+[auto]
+	crlf = input
